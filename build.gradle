@@ -20,6 +20,7 @@ apply plugin:"org.grails.grails-web"
 apply plugin:"org.grails.plugins.views-json"
 
 repositories {
+    mavenLocal()
     mavenCentral()
     maven { url "https://repo.grails.org/grails/core" }
 }
@@ -57,6 +58,8 @@ dependencies {
     implementation "org.grails.plugins:events"
     implementation "org.grails.plugins:views-json"
     implementation "com.oracle.database.jdbc:ojdbc8:21.8.0.0"
+    implementation "api3.plugin:api3-plugin:0.1"
+    implementation "org.grails:grails-datastore-rest-client:6.1.9.RELEASE"
     profile "org.grails.profiles:rest-api"
     runtimeOnly "org.glassfish.web:el-impl:2.2.1-b05"
     runtimeOnly "com.oracle.database.jdbc:ojdbc8:21.8.0.0"
