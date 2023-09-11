@@ -90,13 +90,15 @@ hibernate:
         queries: false
         use_second_level_cache: false
         use_query_cache: false
-ddataSource:
+dataSource:
     pooled: true
     jmxExport: true
     driverClassName: oracle.jdbc.OracleDriver
     logSql: true
+    dialect: org.hibernate.dialect.Oracle12cDialect
     username: ALUNO4
     password: 'ALUNO4'
+    url: jdbc:oracle:thin:@insoft-lnx4.insoft.local:1521:DESENV01
 
     environments:
         development:
@@ -131,7 +133,7 @@ ddataSource:
                     timeBetweenEvictionRunsMillis: 5000
                     minEvictableIdleTimeMillis: 60000
                     validationQuery: SELECT 1
-                    validationQueryTimeout: 3
+                    validationQueryTimeout: 10000
                     validationInterval: 15000
                     testOnBorrow: true
                     testWhileIdle: true
