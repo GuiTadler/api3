@@ -20,10 +20,6 @@ class FuncionarioController implements ExceptionHandlers {
     LogService logService = new LogService()
     String baseUrl = 'http://localhost:8080/api2/funcionario/'
 
-    def index() {
-        render "Bem-vindo à API de Funcionários!"
-    }
-
     def list() {
         def url = "${baseUrl}list"
         def resp = restRequest(url, 'GET')

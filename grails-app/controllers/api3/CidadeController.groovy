@@ -20,10 +20,6 @@ class CidadeController implements ExceptionHandlers  {
     LogService logService = new LogService()
     String baseUrl = 'http://localhost:8080/api2/cidade/'
 
-    def index() {
-        render "Bem-vindo à API de Cidades!"
-    }
-
     def list() {
         def url = "${baseUrl}list"
         def resp = restRequest(url, 'GET')

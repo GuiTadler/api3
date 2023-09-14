@@ -20,10 +20,6 @@ class ReajusteSalarioController implements ExceptionHandlers{
     LogService logService = new LogService()
     String baseUrl = 'http://localhost:8080/api2/ReajusteSalario/'
 
-    def index() {
-        render "Bem-vindo à API de Reajustes de Salário!"
-    }
-
     def list() {
         def url = "${baseUrl}list"
         def resp = restRequest(url, 'GET')
